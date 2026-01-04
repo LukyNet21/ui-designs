@@ -1,0 +1,53 @@
+:root {
+  --bg-dark: hsl(144 18% 1%);
+  --bg: hsl(145 11% 4%);
+  --bg-light: hsl(144 6% 8%);
+  --text: hsl(144 25% 94%);
+  --text-muted: hsl(144 4% 69%);
+  --highlight: hsl(144 3% 38%);
+  --border: hsl(144 4% 28%);
+  --border-muted: hsl(145 6% 17%);
+  --primary: hsl(149 41% 62%);
+  --secondary: hsl(320 50% 73%);
+  --danger: hsl(9 26% 64%);
+  --warning: hsl(52 19% 57%);
+  --success: hsl(146 17% 59%);
+  --info: hsl(217 28% 65%);
+}
+
+body.light {
+  --bg-dark: hsl(144 7% 89%);
+  --bg: hsl(144 13% 94%);
+  --bg-light: hsl(144 100% 100%);
+  --text: hsl(145 24% 4%);
+  --text-muted: hsl(144 4% 28%);
+  --highlight: hsl(144 100% 99%);
+  --border: hsl(144 3% 50%);
+  --border-muted: hsl(144 4% 62%);
+  --primary: hsl(160 100% 13%);
+  --secondary: hsl(318 38% 30%);
+  --danger: hsl(9 21% 41%);
+  --warning: hsl(52 23% 34%);
+  --success: hsl(147 19% 36%);
+  --info: hsl(217 22% 41%);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	outline: none;
+}
+
+html,
+body {
+	width: 100vw;
+	height: 100vh;
+}
+
+body {
+  color: var(--text);
+  background-color: var(--bg-dark);
+}

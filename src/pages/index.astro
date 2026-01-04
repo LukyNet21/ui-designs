@@ -1,0 +1,70 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const links = [{ title: "Auth page", url: "/pages/auth" }];
+---
+
+<Layout title="UI Designs">
+  <main>
+    <section class="hearo">
+      <h1>UI Designs</h1>
+      <p class="muted">
+        Collection of different UI designs created for learning purposes.
+      </p>
+    </section>
+    <section class="links-section">
+      <h2>Pages</h2>
+      <nav class="links">
+        {
+          links.map((link) => (
+            <a href={link.url}>
+              <button>{link.title}</button>
+            </a>
+          ))
+        }
+      </nav>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .muted {
+    color: var(--text-muted);
+  }
+
+  .hearo {
+    padding: 8rem 2rem;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 3rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .links-section {
+    background-color: var(--bg);
+    padding: 4rem;
+    text-align: center;
+  }
+
+  h2 {
+    padding: 2rem;
+  }
+
+  button{
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border);
+    background-color: transparent;
+    color: var(--text);
+    cursor: pointer;
+    border-radius: 1rem;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  button:hover {
+    transform: scale(1.1);
+    border-color: var(--border-muted);
+  }
+</style>
